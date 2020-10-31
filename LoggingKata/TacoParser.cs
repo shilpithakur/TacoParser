@@ -29,16 +29,26 @@
             // Your going to need to parse your string as a `double`
             // which is similar to parsing a string as an `int`
 
+
+            Point location = new Point
+            {
+                Latitude = double.Parse(cells[0]),
+                Longitude = double.Parse(cells[1])
+            };
+            string name = cells[2];
+
+
             // You'll need to create a TacoBell class
             // that conforms to ITrackable
-
             // Then, you'll need an instance of the TacoBell class
             // With the name and point set correctly
+
+            TacoBell taco = new TacoBell(name, location);
 
             // Then, return the instance of your TacoBell class
             // Since it conforms to ITrackable
 
-            return null;
+            return taco;
         }
     }
 }
